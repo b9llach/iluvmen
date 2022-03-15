@@ -12,7 +12,6 @@ int config::load_config(std::string file_path)
 	else {
 		std::string line;
 		while (getline(f, line)) {
-			//line.erase(std::remove_if(line.begin(), line.end(), isspace), line.end());
 			if (line[0] == '#' || line.empty())
 				continue;
 			auto delimiterPos = line.find("=");
