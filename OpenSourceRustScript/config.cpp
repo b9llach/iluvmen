@@ -5,7 +5,7 @@ using namespace std;
 
 int config::load_config(std::string file_path)
 {
-	std::fstream f(file_path.append(".mw"));
+	std::fstream f(file_path.append(".cfg"));
 	if (!f.is_open()) {
 		std::cout << "[load_config] Could not open config '" + file_path + "'\n";
 	}
@@ -26,7 +26,7 @@ int config::load_config(std::string file_path)
 
 int config::save_config(std::string file_path, std::map<std::string, int> settings)
 {	
-	std::ofstream f(file_path.append(".mw"));
+	std::ofstream f(file_path.append(".cfg"));
 	if (!f.is_open()) {
 		std::cout << "[save_config] Could not open config '" + file_path + "'\n";
 	}
